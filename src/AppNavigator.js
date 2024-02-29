@@ -6,7 +6,8 @@ import Splash from './Screens/Splash';
 import Login from './Screens/Login';
 import Signup from './Screens/Signup';
 import Main from './Screens/Main';
-import AddNewsBlog from './Screens/AddNewsBlog';
+import AddNewsBlog from './Screens/AddNewBlog';
+import Profile from './Screens/Profile';
 const Stack = createStackNavigator();
 const AppNavigator = () => {
   return (
@@ -35,6 +36,11 @@ const AppNavigator = () => {
         <Stack.Screen
           component={AddNewsBlog}
           name="AddNewsBlog"
+          options={{headerShown: true}}
+        />
+        <Stack.Screen
+          component={Profile}
+          name="Profile"
           options={{headerShown: true}}
         />
       </Stack.Navigator>

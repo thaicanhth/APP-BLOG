@@ -2,9 +2,11 @@ import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import firestore from '@react-native-firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import auth from '@react-native-firebase/auth';
+import Icon from 'react-native-vector-icons/FontAwesome';
 const Login = ({navigation}) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
   const Signin = () => {
     firestore()
       .collection('Users')
@@ -104,6 +106,36 @@ const Login = ({navigation}) => {
         }}>
         {'Want To Create New Account'}
       </Text>
+      <View style={{
+        marginTop:20,
+        flexDirection:'row',
+        alignSelf: 'center',
+      }}>
+      <TouchableOpacity style={{
+        width:40,
+        height:40,
+        padding:10,
+        backgroundColor:'#3B5998',
+        borderRadius: 50,
+        justifyContent:'center',
+        alignItems: 'center',
+        margin: 5,
+      }}>
+        <Icon name="facebook-f" size={20} color={'white'}></Icon>
+      </TouchableOpacity>
+      <TouchableOpacity style={{
+        width:40,
+        height:40,
+        padding:10,
+        backgroundColor:'#EA4335',
+        borderRadius: 50,
+        justifyContent:'center',
+        alignItems: 'center',
+        margin: 5,
+      }}>
+        <Icon name="google" size={20} color={'white'}></Icon>
+      </TouchableOpacity>
+      </View>
     </View>
   );
 };
