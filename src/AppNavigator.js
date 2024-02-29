@@ -6,8 +6,8 @@ import Splash from './Screens/Splash';
 import Login from './Screens/Login';
 import Signup from './Screens/Signup';
 import Main from './Screens/Main';
-import AddNewsBlog from './Screens/AddNewBlog';
 import Profile from './Screens/Profile';
+import AddNewsBlog from './Screens/AddNewsBlog';
 const Stack = createStackNavigator();
 const AppNavigator = () => {
   return (

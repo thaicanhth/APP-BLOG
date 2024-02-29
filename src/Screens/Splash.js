@@ -11,7 +11,7 @@ const Splash = ({navigation}) => {
   const checkLogin = async () => {
     const email = await AsyncStorage.getItem('EMAIL');
     console.log(email);
-    if (email != '' || email != null) {
+    if (email != null) {
       navigation.navigate('Main');
     } else {
       navigation.navigate('Login');
@@ -19,7 +19,7 @@ const Splash = ({navigation}) => {
   };
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text style={{fontSize: 20, fontWeight: '800', color: 'blue'}}>
+      <Text style={{fontSize: 20, fontWeight: '800', color: '#3B5998'}}>
         WECOME TO FACEBOOK
       </Text>
     </View>
